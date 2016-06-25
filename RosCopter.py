@@ -119,9 +119,8 @@ def mainloop ():
                      fix = NavSatStatus . STATUS_FIX
                  pub_gps . publish ( NavSatFix ( latitude = msg. lat /1 e07 ,
 				                                 longitude = msg. lon /1 e07 ,
-												 altitude = msg . alt /1 e03 ,
-                                                 status = NavSatStatus ( status =fix , 
-												                         service =NavSatStatus . SERVICE_GPS )))
+								 altitude = msg . alt /1 e03 ,
+                                                 status = NavSatStatus ( status =fix ,  service =NavSatStatus . SERVICE_GPS )))
              # pub . publish ( String (" MSG : %s"% msg))
              if msg_type == " ATTITUDE " :
                  pub_attitude . publish ( msg .roll , msg .pitch , msg.yaw , msg . rollspeed , msg .pitchspeed , msg . yawspeed )
